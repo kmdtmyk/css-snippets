@@ -38,7 +38,6 @@ input[type='checkbox']{
     border: 0 solid black;
     opacity: 0;
     transform: scale(0, 0);
-    transition-duration: 0.3s;
   }
 
   &:checked::after{
@@ -67,6 +66,10 @@ input[type='checkbox']{
 
   &:checked::after, &:indeterminate::after{
     opacity: 1;
+  }
+
+  &.animated::after{
+    transition-duration: 0.3s;
   }
 
 }

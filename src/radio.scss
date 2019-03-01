@@ -37,7 +37,6 @@ input[type='radio']{
     background-color: black;
     opacity: 0;
     transform: scale(0, 0);
-    transition-duration: 0.3s;
   }
 
   &:checked::after{
@@ -47,6 +46,10 @@ input[type='radio']{
 
   &:disabled::after{
     background-color: #555;
+  }
+
+  &.animated::after{
+    transition-duration: 0.3s;
   }
 
 }

@@ -8,6 +8,9 @@
   </head>
   <body>
     <div id='app' v-cloak>
+      <label>
+        <input type='checkbox' v-model='animated'> animated
+      </label>
       <table>
         <thead>
           <tr>
@@ -20,26 +23,26 @@
           <tr v-for='(n, i) in 30' :style='{fontSize: 8 + i + "px"}'>
             <td style='text-align: right;'>{{8 + i}}</td>
             <td class='text-nowrap'>
-              <input type='radio' :name='"radio" + n'>
-              <input type='radio' :name='"radio" + n' checked>
-              <input type='radio' disabled>
-              <input type='radio' checked disabled>
+              <input type='radio' :class='classList' :name='"radio" + n'>
+              <input type='radio' :class='classList' :name='"radio" + n' checked>
+              <input type='radio' :class='classList' disabled>
+              <input type='radio' :class='classList' checked disabled>
             </td>
             <td class='text-nowrap'>
               <label>
-                <input type='radio' :name='"radio_label" + n'>
+                <input type='radio' :class='classList' :name='"radio_label" + n'>
                 unchecked
               </label>
               <label>
-                <input type='radio' :name='"radio_label" + n' checked>
+                <input type='radio' :class='classList' :name='"radio_label" + n' checked>
                 checked
               </label>
               <label>
-                <input type='radio' disabled>
+                <input type='radio' :class='classList' disabled>
                 unchecked & disabled
               </label>
               <label>
-                <input type='radio' checked disabled>
+                <input type='radio' :class='classList' checked disabled>
                 checked & disabled
               </label>
             </td>
@@ -52,6 +55,20 @@
     <script>
     new Vue({
       el: '#app',
+      data(){
+        return {
+          animated: false
+        }
+      },
+      computed: {
+        classList(){
+          if(this.animated){
+            return 'animated'
+          }else{
+            return ''
+          }
+        }
+      },
     })
     </script>
   </body>
