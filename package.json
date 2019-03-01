@@ -1,0 +1,23 @@
+{
+  "name": "check-radio",
+  "version": "0.0.0",
+  "description": "",
+  "main": "",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  },
+  "scripts": {
+    "build": "node-sass src/main.scss dist/main.css  --output-style expanded",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmdtmyk/check-radio.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kmdtmyk/check-radio/issues"
+  },
+  "homepage": "https://github.com/kmdtmyk/check-radio#readme"
+}
