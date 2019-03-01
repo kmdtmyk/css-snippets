@@ -8,9 +8,14 @@
   </head>
   <body>
     <div id='app' v-cloak>
-      <label>
-        <input type='checkbox' v-model='animated'> animated
-      </label>
+      <div>
+        <label>
+          <input type='checkbox' v-model='animated'> animated
+        </label>
+        <label>
+          <input type='checkbox' v-model='inverted'> inverted
+        </label>
+      </div>
       <table>
         <thead>
           <tr>
@@ -71,16 +76,20 @@
         },
         data(){
           return {
-            animated: false
+            animated: false,
+            inverted: false,
           }
         },
         computed: {
           classList(){
+            result = []
             if(this.animated){
-              return 'animated'
-            }else{
-              return ''
+              result.push('animated')
             }
+            if(this.inverted){
+              result.push('inverted')
+            }
+            return result
           }
         },
       })

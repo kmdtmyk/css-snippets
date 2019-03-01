@@ -68,8 +68,21 @@ input[type='checkbox']{
     opacity: 1;
   }
 
-  &.animated::after{
-    transition-duration: 0.3s;
+  &.animated{
+    $duration: 0.3s;
+    transition-duration: $duration;
+    &::after{
+      transition-duration: $duration;
+    }
+  }
+
+  &.inverted{
+    &:checked{
+      background-color: #000;
+      &::after{
+        border-color: white;
+      }
+    }
   }
 
 }

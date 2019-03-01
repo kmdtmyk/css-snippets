@@ -68,8 +68,20 @@ input[type='checkbox']:checked::after, input[type='checkbox']:indeterminate::aft
   opacity: 1;
 }
 
+input[type='checkbox'].animated {
+  transition-duration: 0.3s;
+}
+
 input[type='checkbox'].animated::after {
   transition-duration: 0.3s;
+}
+
+input[type='checkbox'].inverted:checked {
+  background-color: #000;
+}
+
+input[type='checkbox'].inverted:checked::after {
+  border-color: white;
 }
 
 input[type='radio'] {
