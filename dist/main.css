@@ -76,11 +76,11 @@ input[type='checkbox'].animated::after {
   transition-duration: 0.3s;
 }
 
-input[type='checkbox'].inverted:checked {
+input[type='checkbox'].inverted:not(:disabled):checked {
   background-color: #000;
 }
 
-input[type='checkbox'].inverted:checked::after {
+input[type='checkbox'].inverted:not(:disabled):checked::after {
   border-color: white;
 }
 
