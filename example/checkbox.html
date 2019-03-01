@@ -4,32 +4,22 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
     <link rel='stylesheet' href='../dist/main.css'>
+    <link rel='stylesheet' href='example.css'>
   </head>
-  <style>
-    [v-cloak] {
-      display: none;
-    }
-    th{
-      text-align: left;
-    }
-    td{
-      white-space: nowrap;
-    }
-  </style>
   <body>
     <div id='app' v-cloak>
       <table>
         <thead>
           <tr>
-            <th>size</th>
-            <th>without label</th>
-            <th>with label</th>
+            <th class='text-left'>size</th>
+            <th class='text-left'>without label</th>
+            <th class='text-left'>with label</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for='(n, i) in 30' :style='{fontSize: 8 + i + "px"}'>
             <td style='text-align: right;'>{{8 + i}}</td>
-            <td>
+            <td class='text-nowrap'>
               <input type='checkbox'>
               <input type='checkbox' checked>
               <input type='checkbox' indeterminate>
@@ -37,7 +27,7 @@
               <input type='checkbox' checked disabled>
               <input type='checkbox' indeterminate disabled>
             </td>
-            <td>
+            <td class='text-nowrap'>
               <label>
                 <input type='checkbox'>
                 unchecked
