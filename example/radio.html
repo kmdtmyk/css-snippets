@@ -53,23 +53,23 @@
 
     <script src='https://cdn.jsdelivr.net/npm/vue'></script>
     <script>
-    new Vue({
-      el: '#app',
-      data(){
-        return {
-          animated: false
-        }
-      },
-      computed: {
-        classList(){
-          if(this.animated){
-            return 'animated'
-          }else{
-            return ''
+      new Vue({
+        el: '#app',
+        data(){
+          return {
+            animated: false
           }
-        }
-      },
-    })
+        },
+        computed: {
+          classList(){
+            result = ['kt-radio']
+            if(this.animated){
+              result.push('animated')
+            }
+            return result
+          }
+        },
+      })
     </script>
   </body>
 </html>
