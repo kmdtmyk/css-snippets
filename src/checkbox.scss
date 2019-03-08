@@ -82,11 +82,11 @@ input[type='checkbox'].kt-checkbox{
       border-color: $color;
     }
     &.inverted:not(:disabled){
-      &:checked{
+      &:checked, &:indeterminate{
         background-color: $color;
-      }
-      &:checked::after{
-        border-color: white;
+        &::after{
+          border-color: white;
+        }
       }
     }
   }
