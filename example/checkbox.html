@@ -15,6 +15,12 @@
         <label>
           <input type='checkbox' v-model='inverted'> inverted
         </label>
+        <select v-model='color'>
+          <option></option>
+          <option>red</option>
+          <option>blue</option>
+          <option>green</option>
+        </select>
       </div>
       <table>
         <thead>
@@ -78,6 +84,7 @@
           return {
             animated: false,
             inverted: false,
+            color: '',
           }
         },
         computed: {
@@ -89,6 +96,7 @@
             if(this.inverted){
               result.push('inverted')
             }
+            result.push(this.color)
             return result
           }
         },
