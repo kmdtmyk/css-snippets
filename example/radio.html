@@ -11,6 +11,9 @@
       <label>
         <input type='checkbox' v-model='animated'> animated
       </label>
+      <label>
+        <input type='checkbox' v-model='inverted'> inverted
+      </label>
       <select v-model='color'>
         <option></option>
         <option>red</option>
@@ -64,6 +67,7 @@
         data(){
           return {
             animated: false,
+            inverted: false,
             color: '',
           }
         },
@@ -72,6 +76,9 @@
             result = ['kt-radio']
             if(this.animated){
               result.push('animated')
+            }
+            if(this.inverted){
+              result.push('inverted')
             }
             result.push(this.color)
             return result

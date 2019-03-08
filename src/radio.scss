@@ -47,13 +47,25 @@ input[type='radio'].kt-radio{
     background-color: #555;
   }
 
-  &.animated::after{
-    transition-duration: 0.3s;
+  &.animated{
+    $duration: 0.3s;
+    transition-duration: $duration;
+    &::after{
+      transition-duration: $duration;
+    }
   }
 
   @mixin check-color($color){
     &::after{
       background-color: $color;
+    }
+    &.inverted:not(:disabled){
+      &:checked{
+        background-color: $color;
+        &::after{
+          background-color: white;
+        }
+      }
     }
   }
 
