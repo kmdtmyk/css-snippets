@@ -11,6 +11,12 @@
       <label>
         <input type='checkbox' v-model='animated'> animated
       </label>
+      <select v-model='color'>
+        <option></option>
+        <option>red</option>
+        <option>blue</option>
+        <option>green</option>
+      </select>
       <table>
         <thead>
           <tr>
@@ -57,7 +63,8 @@
         el: '#app',
         data(){
           return {
-            animated: false
+            animated: false,
+            color: '',
           }
         },
         computed: {
@@ -66,6 +73,7 @@
             if(this.animated){
               result.push('animated')
             }
+            result.push(this.color)
             return result
           }
         },

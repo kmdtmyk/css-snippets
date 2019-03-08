@@ -161,7 +161,6 @@ input[type='radio'].kt-radio::after {
   height: 100%;
   border-radius: 50%;
   box-sizing: border-box;
-  background-color: black;
   opacity: 0;
   transform: scale(0, 0);
 }
@@ -177,4 +176,20 @@ input[type='radio'].kt-radio:disabled::after {
 
 input[type='radio'].kt-radio.animated::after {
   transition-duration: 0.3s;
+}
+
+input[type='radio'].kt-radio::after {
+  background-color: black;
+}
+
+input[type='radio'].kt-radio.red::after {
+  background-color: red;
+}
+
+input[type='radio'].kt-radio.blue::after {
+  background-color: blue;
+}
+
+input[type='radio'].kt-radio.green::after {
+  background-color: green;
 }
