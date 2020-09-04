@@ -4,7 +4,7 @@
   "description": "",
   "main": "",
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.13.1"
   },
   "scripts": {
     "build": "node-sass src/main.scss dist/main.css  --output-style expanded",
